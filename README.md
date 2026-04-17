@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+<!-- ================= CYNOTIC NEON README ================= -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+<h1 style="color:#00f7ff; text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #0ff;">
+  ⚡ CYNOTIC ⚡
+</h1>
 
-In the project directory, you can run:
+<p style="color:#ff00ff; text-shadow: 0 0 8px #ff00ff;">
+  Frontend for a USA-Based School Management System
+</p>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## <span style="color:#00ff9c; text-shadow:0 0 8px #00ff9c;">⚡ Overview</span>
 
-### `npm test`
+<p style="color:#e0e0e0;">
+Cynotic is a modern frontend application designed to manage school operations efficiently,
+including attendance, scheduling, and academic workflows.
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## <span style="color:#00f7ff; text-shadow:0 0 8px #00f7ff;">🧩 Core Modules</span>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<ul style="color:#ffffff;">
+  <li>📊 Attendance Management</li>
+  <li>👩‍🏫 Teacher-Class Assignment</li>
+  <li>📚 Subject Allocation</li>
+  <li>🕒 Class Scheduling</li>
+  <li>⚠️ Conflict Detection</li>
+  <li>📝 Assignment System</li>
+</ul>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## <span style="color:#ff00ff; text-shadow:0 0 8px #ff00ff;">🚀 Features</span>
 
-### `npm run eject`
+<ul style="color:#ffffff;">
+  <li>Student & Teacher Management</li>
+  <li>Timetable Generation</li>
+  <li>Performance Tracking</li>
+  <li>Announcements & Notifications</li>
+  <li>Academic Calendar</li>
+  <li>Parent Communication</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## <span style="color:#00ff9c; text-shadow:0 0 8px #00ff9c;">🛠️ Tech Stack</span>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p style="color:#ffffff;">
+React.js / Next.js <br/>
+Tailwind CSS / SCSS <br/>
+Redux / Context API <br/>
+Axios / Fetch
+</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## <span style="color:#00f7ff; text-shadow:0 0 8px #00f7ff;">📁 Structure</span>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<pre style="color:#00ff9c; background-color:#0d0d0d; padding:15px; border-radius:10px; box-shadow:0 0 10px #00ff9c;">
+cynotic/
+ ├── src/
+ │   ├── components/
+ │   ├── pages/
+ │   ├── modules/
+ │   ├── services/
+ │   └── utils/
+ ├── public/
+ └── README.md
+</pre>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## <span style="color:#ff00ff; text-shadow:0 0 8px #ff00ff;">⚙️ Setup</span>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<pre style="color:#00f7ff; background-color:#0d0d0d; padding:15px; border-radius:10px; box-shadow:0 0 10px #00f7ff;">
+git clone https://github.com/your-username/cynotic.git
+cd cynotic
+npm install
+npm run dev
+</pre>
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## <span style="color:#00ff9c; text-shadow:0 0 8px #00ff9c;">🔮 Future</span>
 
-### Making a Progressive Web App
+<ul style="color:#ffffff;">
+  <li>AI-based analytics</li>
+  <li>Role-based authentication</li>
+  <li>Multi-school support</li>
+  <li>Mobile optimization</li>
+</ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+<div align="center">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<p style="color:#00f7ff; text-shadow:0 0 10px #00f7ff;">
+  ⚡ Built for modern school systems ⚡
+</p>
 
-### Deployment
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<!-- ================= END ================= -->

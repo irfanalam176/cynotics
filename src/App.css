@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: .9em !important;
+  background: linear-gradient(191.84deg, #73188D 0%, #34055B 101.43%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth !important;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+/* GLOBAL CLASSES */
+.App {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.scrollY {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.scrollX {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.scrollY::-webkit-scrollbar {
+  width: 0;
+}
+
+.myBtn {
+  padding: 1em 1.4em;
+  font-family: "Rubik";
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #681780;
+  background-color: #fff;
+  backdrop-filter: blur(8.5px);
+  border-radius: 2em;
+  outline: none;
+  border: none;
+}
+
+.myBtnOutline {
+  padding: 1em 1.4em;
+  font-family: "Rubik";
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1em;
+  letter-spacing: 0em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #444;
+  background-color: transparent;
+  backdrop-filter: blur(8.5px);
+  border-radius: 2em;
+  outline: none;
+  border: 1px solid #444;
+  transition: 200ms all ease-in-out;
+}
+
+.myBtn.primary {
+  color: white;
+  background-color: #681780;
+}
+
+.myBtnOutline.primary {
+  color: #9B80A6;
+  background-color: transparent;
+  border: 1px solid #E9DFED;
+}
+
+.myBtnOutline.primary:hover,
+.myBtnOutline.primary:focus,
+.myBtnOutline.primary:active {
+  color: white;
+  background-color: #681780;
+  border: 1px solid #681780;
+}
+
+.myBtn.secondary {
+  color: #444444;
+  background-color: #FCF0FF !important;
+}
+
+.myBtn.bordered {
+  border: 0.5px solid #D8C8DE;
+}
+
+.myContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2.5em;
+  padding-top: 3em;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 4.375em 4.375em 0px 0px;
+  align-items: center;
+}
+
+.myContainer .containerImage {
+  height: 1em;
+  width: 100%;
+  transform: translateY(calc(-160px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myContainer .title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #501068;
+}
+
+.myContainer .title>span {
+  font-weight: 600;
+}
+
+.myContainer .descText {
+  color: #999999;
+  text-align: center;
+  padding: 1.8em;
+}
+
+.myContainer .form {
+  width: 100%;
+}
+
+.myContainer .form .link {
+  text-align: center;
+}
+
+.myContainer .form .link a {
+  color: #999999;
+  border-bottom: 1px solid #999999;
+}
+
+.myContainer .containerImage .bg,
+.myContainer .containerImage .img {
+  position: absolute;
+}
+
+.myContainer .containerImage .bg {
+  z-index: -99;
+  opacity: .25;
+  width: 11em;
+  height: 11em;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.myContainer .containerImage .img img {
+  --size: 15em;
+  width: var(--size);
+  height: var(--size);
+}
+
+.mainSection {
+  padding: 1.5em 1em;
+  min-height: calc(100vh - 62px);
+  background-color: white;
+  border-radius: 1em 1em 0 0;
+  transition: 200ms all ease-in-out;
+}
+
+.mainSection.roundedLG {
+  border-radius: 2.5em 2.5em 0 0;
+}
+
+.page {
+  transition: 200ms all ease-in-out;
+}
+
+.page.activeSidebar {
+  transform: scale(.9) translate(70%, -3%);
+}
+
+.page.activeSidebar .mainSection {
+  border-radius: 1em;
+}
+
+.blank {
+  margin: 0 .2em;
+  padding: .3em;
+  font-family: "Rubik";
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+.blank.red {
+  color: #FF3D3D;
+  border-color: #FF3D3D;
+}
+
+.blank.green {
+  color: #0A8917;
+  border-color: #0A8917;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+}
+
+.tags::-webkit-scrollbar {
+  width: 0;
+}
+
+.tags .tag {
+  width: 30%;
+  padding: .5em 2em;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+  white-space: nowrap;
+  font-family: "Poppins";
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 0.5px solid #DFDFDF;
+  border-radius: 8px;
+}
+
+.tags .tag.active {
+  color: #F9F9F9;
+  background-color: #681780;
+}
+
+.bottomSection {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  gap: 3em;
+  padding: 1.5em 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
+
+/* bg colors */
+.white {
+  background-color: #fff;
+}
+
+.textPrimary {
+  color: #56126D;
+}
+.icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+}
+
+.myBtn .icon{
+  margin-right: 1em;
+}
+
+/* END GLOBAL CLASSES */
+
+
+/* PAGES */
+/* codeVerification.jsx */
+.codeVerificationInputGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.codeVerificationInputGroup .form-control {
+  padding: 0 !important;
+  width: 53px !important;
+  height: 53px !important;
+  display: flex !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  color: #681780 !important;
+  background-color: #efe7f2 !important;
+  border-radius: 13px !important;
+  outline: none !important;
+  border: none !important;
+  /* justify-content: center;
+    align-items: center; */
+}
+
+/* accountSetings.jsx */
+.accountSettings .profileImage {
+  width: 6em;
+  height: 6em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.accountSettings .profileImage .stackIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.accountSettings .profileImage .img {
+  width: 100%;
+}
+
+/* notification.jsx */
+.notificationSection {
+  /* height: calc(100vh - 93px); */
+  /* overflow: hidden;
+    overflow-y: scroll; */
+}
+
+.notificationSection .notification {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.notificationSection .notification .profileImage {
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C4C4C4;
+  border-radius: .9em;
+  margin-right: .7em;
+  overflow: hidden;
+}
+
+.notificationSection .notification .profileImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.notificationSection .notification .notificationText {
+  font-size: 12px;
+  color: #888888;
+}
+
+.notificationSection .notification .notificationText span {
+  font-weight: 500;
+  color: #444444;
+}
+
+.notificationSection .notification .notificationText .notificationTime {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: .8em;
+  /* identical to box height */
+  text-indent: 3px;
+}
+
+/* privacyPolicy.jsx */
+.privacyPolicySection .policyText {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 173.5%;
+  color: #666666;
+  font-style: normal;
+  font-family: 'Poppins';
+}
+
+/* dashboard.jsx */
+
+/* .navTabs {
+  width: 95%;
+  margin: 0 auto;
+  displbay: flex;
+  border-radius: .6em;
+  background-color: #E5CDEC;
+  overflow: hidden;
+}
+
+.navTabs .navItem,
+.navTabs .navItem a {
+  width: 50%;
+  padding: .5em;
+  text-align: center;
+  color: #681780;
+}
+
+.navTabs .navItem.active,
+.navTabs .navItem.active a {
+  color: white;
+  background-color: #681780;
+} */
+
+.dashboardSection .buttonsContainer {
+  padding: 0 1.5em;
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboardSection .buttonsContainer .myBtn {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  text-transform: capitalize;
+  padding: .5em .7em;
+  border-radius: .6em;
+  color: #444;
+  text-align: center;
+  font-size: 11px;
+  font-family: "Rubik";
+}
+
+.selfCheckSecion .buttonsContainer {
+  margin: 0 auto;
+  width: 80%;
+  bottom: 2em;
+  gap: 1em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selfCheckSecion .buttonsContainer .myBtn {
+  padding: 1em 1.5em;
+}
+
+/* manageKeys.jsx */
+.numberOfKeys {
+  display: flex;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+}
+
+.numberOfKeys input {
+  color: #444;
+  font-size: 0.68em;
+  font-family: "Poppins";
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  width: 62.361px;
+  height: 60.324px;
+  flex-shrink: 0;
+  background: #F5F5F5;
+  border: none;
+  outline: none;
+}
+
+.manageKeysSection .numberOfKeys .text {
+  margin-left: 2em;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.68em;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.manageKeysSection .numberOfKeys .opButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 27.996px;
+  flex-shrink: 0;
+  background: #F5F5F5;
+}
+
+.manageKeysSection .numberOfKeys .opButtons span {
+  height: 1px;
+  width: 100%;
+  background: #B9B9B9;
+}
+
+.manageKeysSection .numberOfKeys .opButtons button,
+.manageKeysSection .numberOfKeys .opButtons a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7C7C7C;
+  font-size: 0.68em;
+  font-family: "Poppins";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.manageKeysSection .subTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15em;
+  height: 3.75em;
+  flex-shrink: 0;
+  color: #444;
+  font-size: 1em;
+  font-family: "Poppins";
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #F5F5F5;
+}
+
+/* END PAGES */
+
+
+/* COMPONENTS */
+/* logo.jsx */
+.logo {
+  padding: 3em 0;
+  padding-bottom: 0;
+}
+
+/* BGVectors.jsx */
+.bgVectors {
+  width: 100%;
+  min-height: 100%;
+  z-index: -9999;
+  position: absolute;
+}
+
+.bgVectors img {
+  position: absolute;
+}
+
+.bgVectors img:first-child {
+  top: 0;
+  right: 0;
+}
+
+.bgVectors img:last-child {
+  bottom: 0;
+  left: 0;
+}
+
+/* navbar.jsx */
+.myNavbar {
+  padding: 1.8em;
+  padding-bottom: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: 200ms all ease-in-out;
+}
+
+.myNavbar .navbarTitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.myNavbar .profileImage {
+  width: 2em;
+  height: 2em;
+}
+
+.myNavbar .profileImage img {
+  width: 100%;
+}
+
+/* sidebar.jsx */
+.sidebar {
+  top: 0;
+  left: -400px;
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  color: white;
+  transition: 200ms all ease-in-out;
+}
+
+.sidebar.activeSidebar {
+  left: 0;
+}
+
+.sidebar .top {
+  padding: 2em 1em;
+}
+
+.sidebar .profileContent {
+  gap: 1em;
+  padding: 1em;
+  display: flex;
+  border-radius: 0 96px 96px 0;
+  background-color: rgba(249, 234, 255, .15);
+}
+
+.sidebar .profileContent .profileImage {
+  width: 4em;
+  height: 4em;
+  border-radius: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.sidebar .profileContent .profileImage img {
+  width: 100%;
+}
+
+.sidebar .profileContent .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar .profileContent .name p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.sidebar .profileContent .name span {
+  opacity: .8;
+}
+
+.sidebar .sidebarMenu {
+  margin-top: 2em;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.sidebar .sidebarMenu::-webkit-scrollbar {
+  width: 0;
+}
+
+.sidebar .sidebarMenu .link,
+.sidebar .logoutItem .link {
+  padding: 1em;
+  gap: 1em;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.sidebar .sidebarMenu .link.active {
+  font-weight: 600;
+}
+
+.sidebar .logoutItem {
+  margin-top: 1.5em;
+  border-radius: 0 4em 4em 0;
+  background-color: rgba(249, 234, 255, .15);
+}
+
+/* studentDeleteModal.jsx */
+.myModal {
+  opacity: 0;
+  position: fixed;
+  z-index: -99999;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000D4;
+  transition: 200ms all ease-in-out;
+}
+
+.myModal .myModalBody {
+  width: 16.8em;
+  padding: 2em 1em;
+  border-radius: 1em;
+  background-color: white;
+}
+
+.myModal .myModalBody .myModalText {
+  font-family: "Rubik";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.myModal .myModalBody .myModalButtons {
+  gap: .5em;
+  display: flex;
+  justify-content: center;
+}
+
+.myModal .myModalBody .myModalButtons .myBtn {
+  padding: 1em;
+  width: 40%;
+}
+
+.myModal.show {
+  opacity: 1;
+  z-index: 99999;
+}
+
+/* commentModal.jsx */
+.myModal textarea {
+  max-height: 5.8em;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #E9DFED;
+  border-radius: 8px;
+  resize: none;
+}
+
+/* END COMPONENTS */
+
+
+/* MEDIA QUERIES */
+/* END MEDIA QUERIES */
